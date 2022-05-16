@@ -1,8 +1,7 @@
-# frontend-projects
+# Animais Fantásticos
 
-The idea of this repository is to show some of my projects using my initial Front-End's knowledges.
-
-  I've already worked using:
-- HTML
-- CSS / Bootstrap
-- JavaScript
+Site informativo sobre alguns animais e suas características.
+Nesse projeto eu trabalhei com:
+- HTML;
+- CSS puro;
+- JavaScript.
