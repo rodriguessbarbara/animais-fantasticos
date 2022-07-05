@@ -47,3 +47,12 @@
 
 // //mostre o texto dos parágrafos no console
 // paragrafos.forEach((paragrafo) => console.log(paragrafo.innerText));
+
+// é uma boa prática separar a função de callback do AddEVentListener, assim:
+// const img = document.querySelector('img');
+
+// function callback() {
+//     console.log('clicou');
+// }
+
+// img.addEventListener('click', callback);
