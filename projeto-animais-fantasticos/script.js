@@ -1,4 +1,4 @@
-function tabNav() {
+function chamaTabNav() {
     const tabmenu = document.querySelectorAll('.js-tabmenu li');
     const tabcontent = document.querySelectorAll('.js-tabcontent section');
 
@@ -20,4 +20,20 @@ function tabNav() {
     }
 }
 
-tabNav();
+chamaTabNav();
+
+function chamaAccordion() {
+    const accordionLista = document.querySelectorAll('.js-accordion dt');
+    accordionLista[0].classList.add('ativo');
+    accordionLista[0].nextElementSibling.classList.add('ativo');
+
+    function ativarAccordion() {
+        this.classList.add('ativo');
+        this.nextElementSibling.classList.toggle('ativo');
+    }
+
+    accordionLista.forEach((item) => {
+        item.addEventListener('click', ativarAccordion);
+    })
+}
+chamaAccordion();
