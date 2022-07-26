@@ -1,6 +1,16 @@
-const img = document.querySelector('img');
-function callback() {
-    console.log('clicou');
+const tabmenu = document.querySelectorAll('.js-tabmenu li');
+const tabcontent = document.querySelectorAll('.js-tabcontent section');
+console.log(tabmenu);
+
+function activeTab(index) {
+    tabcontent.forEach((section) => {
+        section.classList.remove('ativo');
+    });
+    tabcontent[index].classList.add('ativo');
 }
 
-img.addEventListener('click', callback);
+tabmenu.forEach((itemMenu, index) => {
+    itemMenu.addEventListener('click', () => {
+        activeTab(index);
+    })
+});

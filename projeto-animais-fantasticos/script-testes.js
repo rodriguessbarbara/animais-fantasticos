@@ -55,4 +55,25 @@
 //     console.log('clicou');
 // }
 
+
+
 // img.addEventListener('click', callback);
+
+// const img = document.querySelector('img');
+// console.log(img.type);
+// // const h1 = document.querySelector('h1');
+
+
+// function callback(event) {
+//      console.log(event.type);
+//}
+
+// function callback2(e) {
+//     if (e.key === 'f') {
+//         document.body.classList.toggle('muda-cor');
+//     }
+// }
+
+//img.addEventListener('click', callback);
+// window.addEventListener('resize', callback);
+// window.addEventListener('keydown', callback2);
