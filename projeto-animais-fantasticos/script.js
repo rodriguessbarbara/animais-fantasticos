@@ -24,12 +24,14 @@ chamaTabNav();
 
 function chamaAccordion() {
     const accordionLista = document.querySelectorAll('.js-accordion dt');
-    accordionLista[0].classList.add('ativo');
-    accordionLista[0].nextElementSibling.classList.add('ativo');
+    const classeAtivo = 'ativo';
+
+    accordionLista[0].classList.add(classeAtivo);
+    accordionLista[0].nextElementSibling.classList.add(classeAtivo);
 
     function ativarAccordion() {
-        this.classList.add('ativo');
-        this.nextElementSibling.classList.toggle('ativo');
+        this.classList.add(classeAtivo);
+        this.nextElementSibling.classList.toggle(classeAtivo);
     }
 
     accordionLista.forEach((item) => {
@@ -37,3 +39,22 @@ function chamaAccordion() {
     })
 }
 chamaAccordion();
+
+function chamaScrollSuave() {
+    function scrollSection(event) {
+        event.preventDefault();
+
+        const href = event.currentTarget.getAttribute('href'); //aqui pega só o nome do id
+        const section = document.querySelector(href); //pega a section inteira a partir do nome do id
+
+        section.scrollIntoView({
+            behavior: 'smooth',
+        })
+    }
+
+    const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+    linksInternos.forEach((link) => {
+        link.addEventListener('click', scrollSection);
+    })
+}
+chamaScrollSuave();
