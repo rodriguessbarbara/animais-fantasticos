@@ -15,8 +15,18 @@
 <body>
     <div class="grid-container">
         <nav class="menu js-menu">
-            <ul>
+            <button data-menu="button" aria-expanded="false" aria-controls="menu">menu</button>
+            <ul data-menu="list" id="menu">
                 <li><a href="#animais">Animais</a> </li>
+                <li data-dropdown>
+                    <a href="sobre.html">Sobre</a>
+                    <ul class="menu-dropdown">
+                        <li><a href="empresa.html">Empresa</a></li>
+                        <li><a href="equipe.html">Equipe</a></li>
+                        <li><a href="socios.html">Sócios</a></li>
+                        <li><a href="investidores.html">Investidores</a></li>
+                    </ul>
+                </li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contato">Contato</a></li>
                 <li><a data-modal="abrir" href="login.html"> Login →</a></li>
@@ -129,10 +139,32 @@
             </dl>
         </section>
 
+        <section class="grid-section numeros" data-anime="scroll">
+            <h1 class="titulo">Números</h1>
+            <div class="grid-numeros">
+                <div class="animal-numero">
+                    <h3>Lobos</h3>
+                    <span data-numero>4587</span>
+                </div>
+                <div class="animal-numero">
+                    <h3>Raposa</h3>
+                    <span data-numero>3971</span>
+                </div>
+                <div class="animal-numero">
+                    <h3>Esquilos</h3>
+                    <span data-numero>6961</span>
+                </div>
+                <div class="animal-numero">
+                    <h3>Ursos</h3>
+                    <span data-numero>1794</span>
+                </div>
+            </div>
+        </section>
+
         <section class="grid-section contato js-scroll" id="contato">
             <h1 class="titulo">Contato</h1>
             <div class="mapa">
-                <img src="img/mapa.png" alt="mapa">            
+                <img src="img/mapa.png" data-tooltip aria-label="Endereço próximo ao estacionamento." alt="mapa">            
             </div>
             <ul class="dados">
                 <li>contato@gmail.com</li>

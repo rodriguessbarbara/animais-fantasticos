@@ -27,7 +27,7 @@ body {
     grid-column: 3 / 5;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    background-color: #FF44FC;
+    background-color: #ff577f;
 }
 
 .menu ul {
@@ -84,7 +84,7 @@ body {
     width: 40px;
     height: 10px;
     margin-right: 10px;
-    background-color: #FF44FC;
+    background-color: #ff577f;
 }
 
 .animais p {
@@ -108,7 +108,7 @@ body {
 }
 
 .animais-lista::-webkit-scrollbar-thumb {
-    background-color: #FF44FC;
+    background-color: #ff577f;
     border-left: 4px solid #FEFAF1;
     border-right: 4px solid #FEFAF1;
 }
@@ -143,7 +143,7 @@ body {
     width: 20px;
     height: 10px;
     margin-right: 10px;
-    background-color: #FF44FC;
+    background-color: #ff577f;
 }
 
 .faq-lista dd {
@@ -171,13 +171,13 @@ body {
     width: 20px;
     height: 10px;
     margin-right: 10px;
-    background-color: #FF44FC;
+    background-color: #ff577f;
 }
 
 .copy {
     grid-column: 3 / 5;
     margin-bottom: 2rem;
-    background-color: #FF44FC;
+    background-color: #ff577f;
 
 }
 
@@ -191,7 +191,60 @@ body {
     background: #222222;
 }
 
+[data-menu="button"] {
+    display: none;
+}
+
 @media (max-width: 700px) {
+    /* MENU MOBILE */
+    .js [data-menu="button"] {
+        display: flex;
+        background: #222;
+        border: none;
+        padding: .5rem 1rem;
+        margin: 10px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-family: monospace;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+        align-items: center;
+        position: relative;
+        z-index: 20;
+    }
+    .js [data-menu="button"]::before {
+        content: "";
+        margin-right: 5px;
+        display: inline-block;
+        background: #fff;
+        width: 10px;
+        height: 2px;
+        box-shadow: 0 4px #fff, 0 -4px #fff;
+        transition: transform .5s;
+    }
+    .js [data-menu="button"].ativo::before {
+        transform: rotate(90deg);
+    }
+    .js [data-menu="list"] {
+        display: none;
+        position: absolute;
+        background: #ff577f;
+        width: 150px;
+        z-index: 10;
+        padding: 50px 5px 20px 5px;
+        top: 0;
+    }
+    .js [data-menu="list"].ativo {
+        display: block;
+        animation: show .5s forwards;
+    }
+    .js .menu-dropdown {
+        position: static;
+        background-color: #FFC764;
+    }
+    /* FIM DO MENU MOBILE */
+
     .grid-container {
         grid-template-columns: 1fr;
     }

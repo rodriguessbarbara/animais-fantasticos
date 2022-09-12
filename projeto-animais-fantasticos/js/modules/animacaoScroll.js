@@ -7,7 +7,7 @@ export default function chamaAnimacaoScroll() {
           const sectionTop = section.getBoundingClientRect().top - metadeDaTela; //getboudingclientrect pega a distancia do topo da section até o topo da tela
           if (sectionTop < 0) {
               section.classList.add('ativo');
-              console.log(sectionTop);
+              //console.log(sectionTop);
           }
       })
   }

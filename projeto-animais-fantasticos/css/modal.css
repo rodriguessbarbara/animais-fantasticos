@@ -34,13 +34,13 @@
   min-width: 300px;
   background-color: #fff;
   padding: 25px;
-  border: 6px solid #FF44FC;
+  border: 6px solid #FF577F;
   outline: 10px solid #fff;
   position: relative;
 }
 
 .fechar {
-  background: #911b8f;
+  background: #FFC764;
   font-size: 1.2rem;
   font-family: 'IBM Plex Mono', monospace;
   color: #fff;
@@ -70,11 +70,10 @@
 
 .modal button[type="submit"] {
   display: block;
-  background-color: #911b8f;
+  background-color: #FFC764;
   font-family: monospace;
   font-size: 1rem;
   font-weight: bold;
-  color: #fff;
   border: none;
   border-radius: 4px;
   padding: .7rem 2rem;
