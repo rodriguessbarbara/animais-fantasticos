@@ -14,7 +14,9 @@ scrollSuave.init();
 const accordion = new chamaAccordion('.js-accordion dt');
 accordion.init();
 
-chamaTabNav();
+const tabNav = new chamaTabNav('.js-tabmenu li', '.js-tabcontent section');
+tabNav.init();    
+
 chamaAnimacaoScroll();
 chamaModal();
 chamaTooltip();
