@@ -21,7 +21,7 @@ const modal = new chamaModal('[data-modal="abrir"]', '[data-modal="fechar"]', '[
 modal.init();
 
 const tooltip = new chamaTooltip('[data-tooltip]');
-tooltipl.init();
+tooltip.init();
 
 chamaAnimacaoScroll();
 chamaDropDown();
