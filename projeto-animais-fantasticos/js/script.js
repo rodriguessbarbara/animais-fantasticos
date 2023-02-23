@@ -20,8 +20,10 @@ tabNav.init();
 const modal = new chamaModal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
 modal.init();
 
+const tooltip = new chamaTooltip('[data-tooltip]');
+tooltipl.init();
+
 chamaAnimacaoScroll();
-chamaTooltip();
 chamaDropDown();
 chamaMenuMobile();
 chamaAnimacaoNumeros();
