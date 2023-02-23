@@ -25,5 +25,6 @@ export default class chamaTabNav {
       this.activeTab(0);
       this.addTabNavEVent();
     }
+    return this;
   }
 }
