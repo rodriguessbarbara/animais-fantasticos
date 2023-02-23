@@ -32,7 +32,7 @@ export default class chamaModal {
 
   init() {
     if (this.botaoAbrir && this.botaoFechar && this.containerModal) {
-      this.addModalEvents
+      this.addModalEvents();
     }
     return this;
   }

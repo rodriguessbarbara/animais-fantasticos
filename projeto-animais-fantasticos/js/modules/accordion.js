@@ -22,5 +22,6 @@ export default class chamaAccordion {
       this.toggleAccordion(this.accordionLista[0]);
       this.addAccordionEvent();
     }
+    return this;
   }
 }
