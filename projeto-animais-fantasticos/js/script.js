@@ -3,7 +3,6 @@ import chamaAccordion from './modules/accordion.js';
 import chamaTabNav from './modules/tabNav.js';
 import chamaModal from './modules/modal.js';
 import chamaTooltip from './modules/tooltip.js';
-// import chamaAnimacaoNumeros from './modules/animacaoNumeros.js';
 import chamaAnimacaoScroll from './modules/animacaoScroll.js';
 import chamaDropDown from './modules/menuDropDown.js';
 import chamaMenuMobile from './modules/menuMobile.js';
@@ -24,7 +23,9 @@ modal.init();
 const tooltip = new chamaTooltip('[data-tooltip]');
 tooltip.init();
 
-chamaAnimacaoScroll();
+const scrollAnimacao = new chamaAnimacaoScroll('.js-scroll');
+scrollAnimacao.init();
+
 chamaDropDown();
 chamaMenuMobile();
-fetchAnimais('../../animaisapi.json', '.numeros-grid');
+fetchAnimais('js/animaisapi.json', '.grid-numeros');
