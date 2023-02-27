@@ -3,12 +3,13 @@ import chamaAnimacaoNumeros from "./animacaoNumeros.js";
 export default function fetchAnimais(url, target) {
   function createAnimal(animal) {
     const div = document.createElement("div");
-    div.classList.add("numero-animal");
+    div.classList.add("animal-numero");
     div.innerHTML = `<h3>${animal.specie}</h3><span data-numero>${animal.total}</span>`;
     return div;
   }
 
   const numerosGrid = document.querySelector(target);
+
   function preencherAnimais(animal) {
     const divAnimal = createAnimal(animal);
     numerosGrid.appendChild(divAnimal);
@@ -28,6 +29,7 @@ export default function fetchAnimais(url, target) {
       const animaisResponse = await fetch(url);
       const animaisJSON = await animaisResponse.json();
 
+      console.log(animaisJSON)
       animaisJSON.forEach((animal) => preencherAnimais(animal));
       animaAnimaisNumeros();
     } catch (erro) {
