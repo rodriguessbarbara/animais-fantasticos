@@ -6,6 +6,7 @@ import chamaTooltip from './modules/tooltip.js';
 import chamaAnimacaoScroll from './modules/animacaoScroll.js';
 import chamaDropDown from './modules/menuDropDown.js';
 import chamaMenuMobile from './modules/menuMobile.js';
+import chamaFuncionamento from './modules/chamaFuncionamento.js';
 import fetchAnimais from './modules/fetch-animais.js';
 
 const scrollSuave = new chamaScrollSuave('[data-menu="suave"] a[href^="#"]');
@@ -31,5 +32,8 @@ dropDown.init();
 
 const menuMobile = new chamaMenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
+
+const funcionamento = new chamaFuncionamento('[data-semana]', 'aberto');
+funcionamento.init();
 
 fetchAnimais('js/animaisapi.json', '.grid-numeros');
