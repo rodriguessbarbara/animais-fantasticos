@@ -1,19 +1,34 @@
-import handleOutsideClick from './outsideClick.js';
+import handleOutsideClick from "./outsideClick.js";
 
-export default function chamaDropDown() {
-  const menusDropDown = document.querySelectorAll('[data-dropdown]');
+export default class chamaDropDown {
+  constructor(dropdownMenu) {
+    this.menusDropDown = document.querySelectorAll(dropdownMenu);
+    this.classeAtiva = "ativo";
 
-  function handleClick(event) {
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(event) {
     event.preventDefault();
-    this.classList.toggle('ativo');
-    handleOutsideClick(this, () => {
-      this.classList.remove('ativo');
+    const element = event.currentTarget;
+
+    element.classList.toggle(this.classeAtiva);
+    handleOutsideClick(element.currentTarget, () => {
+      element.classList.remove("ativo");
     });
   }
-  
-  menusDropDown.forEach(menu => {
-    menu.addEventListener('click', handleClick);
-    menu.addEventListener('touchstart', handleClick);
-  });
-  
+
+  addEventDropDown() {
+    this.menusDropDown.forEach((menu) => {
+      menu.addEventListener("click", this.handleClick);
+      menu.addEventListener("touchstart", this.handleClick);
+    });
+  }
+
+  init() {
+    if (this.menusDropDown.length) {
+      this.addEventDropDown();
+    }
+    return this;
+  }
 }

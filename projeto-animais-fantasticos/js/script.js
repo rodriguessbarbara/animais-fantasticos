@@ -26,6 +26,8 @@ tooltip.init();
 const scrollAnimacao = new chamaAnimacaoScroll('.js-scroll');
 scrollAnimacao.init();
 
-chamaDropDown();
+const dropDown = new chamaDropDown('[data-dropdown]');
+dropDown.init();
+
 chamaMenuMobile();
 fetchAnimais('js/animaisapi.json', '.grid-numeros');
